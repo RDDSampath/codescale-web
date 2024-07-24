@@ -17,7 +17,7 @@ import iconmidle from '../assets/images/mid.svg';
 
 export default function HeroSection() {
   const OurImage = chakra(Image, {
-    shouldForwardProp: (prop) => ['src', 'alt', 'width', 'height', 'margin', 'alignSelf',].includes(prop),
+    shouldForwardProp: (prop) => ['src', 'alt', 'width', 'height'].includes(prop),
   })
   return (
     <Container maxW={'5xl'}>
@@ -57,7 +57,6 @@ export default function HeroSection() {
             alt="Illustration"
             width={1000}
             height={1000}
-            alignSelf={'center'}
           />
         </Flex>
       </Stack>
