@@ -12,10 +12,10 @@ export default function WithLargeQuote() {
       align={'center'}
       direction={'column'}>
       <Text fontSize={{ base: 'xl', md: '2xl' }} textAlign={'center'} maxW={'3xl'}>
-        "Our experience with this React Native app has been exceptional. The integration of
+        &quot;Our experience with this React Native app has been exceptional. The integration of
         Firebase for authentication and data management has streamlined our workflow, and
         the user-friendly interface has enhanced our team's productivity. We’re impressed
-        with the quick turnaround and the ability to meet our specific needs effectively."
+        with the quick turnaround and the ability to meet our specific needs effectively.&quot;
       </Text>
       <Box textAlign={'center'}>
         <Avatar
