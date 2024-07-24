@@ -26,16 +26,16 @@ import {
   MoonIcon, 
   SunIcon
 } from '@chakra-ui/icons'
-import Image from 'next/image';
-import logoLight from '../assets/images/logoWhite.png';
-import logoDark from '../assets/images/logoBlack.png';
+import Image from 'next/image'
+import logoLight from '../assets/images/logoWhite.png'
+import logoDark from '../assets/images/logoBlack.png'
 
 export default function WithSubnavigation() {
   const { colorMode, toggleColorMode } = useColorMode()
-  const { isOpen, onOpen, onClose ,onToggle} = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure()
   const OurImage = chakra(Image, {
-    shouldForwardProp: (prop) => ['src', 'alt', 'width', 'height','margin'].includes(prop),
-  });
+    shouldForwardProp: (prop) => ['src', 'alt', 'width', 'height', 'margin'].includes(prop),
+  })
 
   return (
     <Box>
@@ -62,7 +62,7 @@ export default function WithSubnavigation() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <Button as={'a'} variant={'link'} href="/">
-          <Text>CODESCALE</Text>
+            <Text>CODESCALE</Text>
           </Button>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -84,16 +84,16 @@ export default function WithSubnavigation() {
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
-            bg={'pink.400'}
+            bg={'orange.400'}
             href="/signup"
             _hover={{
-              bg: 'pink.300',
+              bg: 'orange.300',
             }}>
             Sign Up
           </Button>
           <Button onClick={toggleColorMode}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
+            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+          </Button>
         </Stack>
       </Flex>
 
@@ -166,7 +166,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
+            _groupHover={{ color: 'orange.400' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -180,7 +180,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           justify={'flex-end'}
           align={'center'}
           flex={1}>
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={'orange.400'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Box>
@@ -254,41 +254,51 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
+    label: 'Features',
     children: [
       {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
+        label: 'Authentication',
+        subLabel: 'Firebase Auth Integration',
         href: '#',
       },
       {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
+        label: 'Character Listing',
+        subLabel: 'ThronesAPI Integration',
+        href: '#',
+      },
+      {
+        label: 'Profile Screen',
+        subLabel: 'User Info and Battery Level',
+        href: '#',
+      },
+      {
+        label: 'Voice-to-Text',
+        subLabel: 'Speech Recognition Features',
         href: '#',
       },
     ],
   },
   {
-    label: 'Find Work',
+    label: 'Documentation',
     children: [
       {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
+        label: 'Setup Guide',
+        subLabel: 'How to Setup the Project',
         href: '#',
       },
       {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
+        label: 'API Reference',
+        subLabel: 'API Documentation',
         href: '#',
       },
     ],
   },
   {
-    label: 'Learn Design',
+    label: 'About',
     href: '#',
   },
   {
-    label: 'Hire Designers',
+    label: 'Contact',
     href: '#',
   },
 ]

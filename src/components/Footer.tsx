@@ -83,7 +83,7 @@ export default function LargeWithAppLinksAndSocial() {
               Help Center
             </Box>
             <Box as="a" href={'#'}>
-              Safety Center
+              FAQ
             </Box>
             <Box as="a" href={'#'}>
               Community Guidelines
@@ -125,7 +125,7 @@ export default function LargeWithAppLinksAndSocial() {
           spacing={4}
           justify={{ md: 'space-between' }}
           align={{ md: 'center' }}>
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text>© 2024 My App Showcase. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />

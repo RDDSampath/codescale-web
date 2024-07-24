@@ -13,11 +13,11 @@ import {
 } from '@chakra-ui/react'
 import { ReactElement } from 'react'
 import {
-  FcAbout,
-  FcAssistant,
-  FcCollaboration,
-  FcDonate,
-  FcManager,
+  FcLock,
+  FcList,
+  FcPortraitMode,
+  FcVoicePresentation,
+  FcStatistics,
 } from 'react-icons/fc'
 
 interface CardProps {
@@ -61,49 +61,48 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
   )
 }
 
-export default function gridListWith() {
+export default function Features() {
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
         <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
-          Short heading
+          Key Features
         </Heading>
         <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati ut
-          cupiditate pariatur, dignissimos, placeat amet officiis.
+          Explore the main functionalities of our React Native application.
         </Text>
       </Stack>
 
       <Container maxW={'5xl'} mt={12}>
         <Flex flexWrap="wrap" gridGap={6} justify="center">
           <Card
-            heading={'Heading'}
-            icon={<Icon as={FcAssistant} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            heading={'Authentication'}
+            icon={<Icon as={FcLock} w={10} h={10} />}
+            description={'Secure user authentication using Firebase.'}
             href={'#'}
           />
           <Card
-            heading={'Heading'}
-            icon={<Icon as={FcCollaboration} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            heading={'Character Listing'}
+            icon={<Icon as={FcList} w={10} h={10} />}
+            description={'Browse characters from ThronesAPI.'}
             href={'#'}
           />
           <Card
-            heading={'Heading'}
-            icon={<Icon as={FcDonate} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            heading={'User Profile'}
+            icon={<Icon as={FcPortraitMode} w={10} h={10} />}
+            description={'View and manage user profile information.'}
             href={'#'}
           />
           <Card
-            heading={'Heading'}
-            icon={<Icon as={FcManager} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            heading={'Voice-to-Text'}
+            icon={<Icon as={FcVoicePresentation} w={10} h={10} />}
+            description={'Utilize voice-to-text features for ease of use.'}
             href={'#'}
           />
           <Card
-            heading={'Heading'}
-            icon={<Icon as={FcAbout} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            heading={'Analytics'}
+            icon={<Icon as={FcStatistics} w={10} h={10} />}
+            description={'Track app usage with Firebase Analytics.'}
             href={'#'}
           />
         </Flex>
