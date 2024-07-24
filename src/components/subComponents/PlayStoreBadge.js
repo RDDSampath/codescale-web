@@ -8,10 +8,9 @@ export const PlayStoreBadge = () => {
       target="_blank"
       rel="noopener noreferrer"
       display="inline-block"
-      bg={useColorModeValue('gray.200', 'gray.700')}
       borderRadius="md"
       overflow="hidden"
-      p={2}
+      p={1}
       _hover={{ bg: useColorModeValue('gray.300', 'gray.600') }}
     >
       <img
