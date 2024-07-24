@@ -14,7 +14,7 @@ export default function WithLargeQuote() {
       <Text fontSize={{ base: 'xl', md: '2xl' }} textAlign={'center'} maxW={'3xl'}>
         &quot;Our experience with this React Native app has been exceptional. The integration of
         Firebase for authentication and data management has streamlined our workflow, and
-        the user-friendly interface has enhanced our team's productivity. Were impressed
+        the user-friendly interface has enhanced our team s productivity. Were impressed
         with the quick turnaround and the ability to meet our specific needs effectively.&quot;
       </Text>
       <Box textAlign={'center'}>
